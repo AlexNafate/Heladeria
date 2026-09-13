@@ -21,6 +21,13 @@ html {
     --texto-suave: #666666;
 }
 
+/* IMÁGENES RESPONSIVE POR DEFECTO */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, sans-serif;
     color: var(--texto);
@@ -50,10 +57,7 @@ body {
     background-color: var(--azul-oscuro);
 }
 
-/* LOGO CON IMAGEN */
-/* =====================================
-   LOGO CON IMAGEN + TEXTO
-   ===================================== */
+/* LOGO CON IMAGEN + TEXTO */
 .logo {
     display: flex;
     align-items: center;
@@ -399,6 +403,7 @@ body {
 
 .categoria {
     margin-bottom: 3rem;
+    scroll-margin-top: 100px;
 }
 
 .categoria h3 {
@@ -924,153 +929,6 @@ body {
 }
 
 /* =====================================
-   RESPONSIVE
-   ===================================== */
-@media (max-width: 900px) {
-    .grid-sabores {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .nav {
-        gap: 1rem;
-    }
-
-    .nav a {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: var(--azul);
-        width: 100%;
-        padding: 1rem;
-        gap: 0;
-        animation: fadeIn 0.4s ease;
-    }
-
-    .nav.active {
-        display: flex;
-    }
-
-    .nav a {
-        margin: 0.5rem 0;
-        padding: 0.8rem;
-        width: 100%;
-        text-align: center;
-    }
-
-    .menu-btn {
-        display: block;
-    }
-
-    .sabores-completos h2,
-    .valores h2,
-    .historia h2,
-    .cta h2,
-    .promos-mes h2,
-    .promos-especiales h2,
-    .como-aplicar h2,
-    .terminos h2 {
-        font-size: 1.8rem;
-    }
-
-    .categoria h3 {
-        font-size: 1.4rem;
-    }
-
-    .bloque h2 {
-        font-size: 1.6rem;
-    }
-
-    .bloque {
-        padding: 2rem 1.5rem;
-    }
-
-    .bloque p {
-        font-size: 1rem;
-    }
-
-    .hero-sabores,
-    .hero-mision,
-    .hero-promociones {
-        padding: 4rem 1.5rem;
-    }
-
-    .promo-card {
-        padding: 2rem 1.5rem;
-    }
-
-    .promo-icon {
-        font-size: 2.8rem;
-    }
-
-    .promo-card h3 {
-        font-size: 1.2rem;
-    }
-
-    .paso-numero {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .header {
-        padding: 12px 20px;
-    }
-
-    .logo-img {
-        height: 45px;
-    }
-
-    .grid-sabores {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .categoria h3 {
-        font-size: 1.4rem;
-    }
-
-    .cta {
-        padding: 45px 20px;
-    }
-
-    .cta p {
-        font-size: 16px;
-    }
-
-    .redes {
-        gap: 15px;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-/* =====================================
    SECCIÓN DE CARTAS CON 3 IMÁGENES
    ===================================== */
 .cartas {
@@ -1093,7 +951,6 @@ body {
     gap: 2rem;
 }
 
-/* TARJETA TIPO CARTA */
 .carta {
     background: var(--blanco);
     border-radius: 20px;
@@ -1111,7 +968,6 @@ body {
     border-color: var(--celeste);
 }
 
-/* IMAGEN DE LA CARTA */
 .carta-imagen {
     width: 100%;
     height: 220px;
@@ -1130,7 +986,6 @@ body {
     transform: scale(1.1);
 }
 
-/* CONTENIDO DE LA CARTA */
 .carta-contenido {
     padding: 1.8rem 1.5rem;
     text-align: center;
@@ -1153,7 +1008,6 @@ body {
     flex-grow: 1;
 }
 
-/* BOTÓN DE LA CARTA */
 .carta-btn {
     display: inline-block;
     padding: 0.7rem 1.8rem;
@@ -1172,33 +1026,6 @@ body {
     transform: scale(1.05);
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .cartas h2 {
-        font-size: 1.8rem;
-    }
-
-    .carta-imagen {
-        height: 180px;
-    }
-
-    .carta-contenido {
-        padding: 1.5rem 1rem;
-    }
-
-    .carta-contenido h3 {
-        font-size: 1.3rem;
-    }
-}
-/* SCROLL SUAVE PARA LOS ENLACES DE LAS CARTAS */
-html {
-    scroll-behavior: smooth;
-}
-
-/* COMPENSAR EL HEADER STICKY AL HACER SCROLL */
-.categoria {
-    scroll-margin-top: 100px;
-}
 /* =====================================
    SECCIÓN DE PALETAS CON 2 IMÁGENES
    ===================================== */
@@ -1284,14 +1111,163 @@ html {
     line-height: 1.6;
 }
 
-/* RESPONSIVE PARA PALETAS */
+/* =====================================
+   RESPONSIVE - TABLET (max 900px)
+   ===================================== */
+@media (max-width: 900px) {
+    .grid-sabores {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav {
+        gap: 1rem;
+    }
+
+    .nav a {
+        font-size: 0.9rem;
+    }
+}
+
+/* =====================================
+   RESPONSIVE - MÓVIL (max 768px)
+   ===================================== */
 @media (max-width: 768px) {
+
+    /* HEADER */
+    .header {
+        padding: 12px 18px;
+    }
+
+    .logo-img {
+        height: 45px;
+    }
+
+    .logo-texto {
+        font-size: 1.2rem;
+    }
+
+    /* NAV MÓVIL */
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--azul);
+        width: 100%;
+        padding: 1rem;
+        gap: 0;
+        animation: fadeIn 0.4s ease;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav a {
+        margin: 0.5rem 0;
+        padding: 0.8rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    /* HERO */
+    .hero {
+        min-height: 400px;
+        padding: 30px 15px;
+    }
+
+    .hero-content {
+        padding: 20px 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    /* HERO SABORES / MISIÓN / PROMOS */
+    .hero-sabores,
+    .hero-mision,
+    .hero-promociones {
+        padding: 4rem 1.5rem;
+        min-height: 300px;
+    }
+
+    /* SECCIÓN SABORES */
+    .sabores {
+        padding: 3rem 1.2rem;
+    }
+
+    .sabores h2,
+    .promociones h2,
+    .contacto h2 {
+        font-size: 1.6rem;
+    }
+
+    .grid-sabores {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    /* PROMOCIONES */
+    .promociones {
+        padding: 3rem 1.2rem;
+    }
+
+    .promo {
+        padding: 1.5rem;
+    }
+
+    /* IMAGEN DEL MENÚ */
+    .menu-imagen {
+        padding: 20px 12px;
+    }
+
+    .menu-imagen img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    /* CARTAS (3 imágenes) */
+    .cartas {
+        padding: 3rem 1.2rem;
+    }
+
+    .cartas h2 {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+
+    .grid-cartas {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .carta-imagen {
+        height: 200px;
+    }
+
+    .carta-contenido h3 {
+        font-size: 1.3rem;
+    }
+
+    /* PALETAS (2 imágenes) */
     .paletas {
-        padding: 3.5rem 1.5rem;
+        padding: 3rem 1.2rem;
     }
 
     .paletas h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .paletas-descripcion {
@@ -1301,13 +1277,62 @@ html {
 
     .grid-paletas {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.8rem;
     }
+
     .paleta-imagen {
         height: 280px;
+    }
+
+    .paleta-info {
+        padding: 1.5rem 1.2rem;
     }
 
     .paleta-info h3 {
         font-size: 1.2rem;
     }
-}
+
+    /* SABORES COMPLETOS */
+    .sabores-completos {
+        padding: 3rem 1.2rem;
+    }
+
+    .sabores-completos h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .categoria h3 {
+        font-size: 1.4rem;
+    }
+
+    .categoria {
+        scroll-margin-top: 70px;
+    }
+
+    /* MISIÓN Y VISIÓN */
+    .mision-vision {
+        padding: 3rem 1.2rem;
+    }
+
+    .bloque {
+        padding: 2rem 1.5rem;
+    }
+
+    .bloque h2 {
+        font-size: 1.6rem;
+    }
+
+    .bloque p {
+        font-size: 1rem;
+    }
+
+    /* VALORES */
+    .valores {
+        padding: 3rem 1.2rem;
+    }
+
+    .valores h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2.5rem;
+    }
