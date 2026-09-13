@@ -58,7 +58,7 @@ body {
     display: none;
     background: none;
     border: none;
-    color: white;
+    color: rgb(18, 4, 204);
     font-size: 1.8rem;
     cursor: pointer;
 }
@@ -319,7 +319,7 @@ body {
 /* HERO SABORES */
 .hero-sabores {
     background-image: 
-        linear-gradient(rgba(255, 105, 180, 0.5), #5dade280),
+        linear-gradient(rgba(10, 22, 177, 0.5), #5dade280),
         url('img/hero.jpg');
     background-size: cover;
     background-position: center;
@@ -331,7 +331,7 @@ body {
 /* HERO MISIÓN Y VISIÓN */
 .hero-mision {
     background-image: 
-        linear-gradient(rgba(174, 238, 238, 0.6), rgba(255, 182, 193, 0.6)),
+        linear-gradient(rgba(174, 238, 238, 0.6), rgba(182, 253, 255, 0.6)),
         url('img/hero.jpg');
     background-size: cover;
     background-position: center;
@@ -1261,7 +1261,7 @@ body {
    ===================================== */
 
 .footer {
-    background-color: #5c3b32;
+    background-color: #003fc7;
 
     color: #ffffff;
 
@@ -1295,7 +1295,7 @@ body {
 }
 
 .redes a:hover {
-    color: #f9a8c7;
+    color: #0d00c7;
 }
 
 
