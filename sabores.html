@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -15,25 +14,20 @@
 
     <!-- ENCABEZADO / NAVEGACIÓN -->
     <header class="header">
-
         <div class="logo">
-        <a href="index.html">
-            <img src="Img/logo.png" alt="Dulce Frío" class="logo-img">
-        </a>
-    </div>
-
+            <a href="index.html">
+                <img src="img/logo.png" alt="Dulce Frío" class="logo-img">
+                <span class="logo-texto">Dulce Frío</span>
+            </a>
+        </div>
         <nav class="nav" id="nav">
             <a href="index.html">Inicio</a>
             <a href="sabores.html">Sabores</a>
+            <a href="mision y vision.html">Misión y Visión</a>
             <a href="promociones.html">Promociones</a>
             <a href="contactanos.html">Contacto</a>
-            <a href="mision y vision.html"> Misión y Visión</a>
         </nav>
-
-        <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
-            ☰
-        </button>
-
+        <button class="menu-btn" id="menuBtn">☰</button>
     </header>
 
 
@@ -57,8 +51,50 @@
     <!-- IMAGEN DEL MENÚ CENTRADA -->
     <section class="menu-imagen">
 
-    <img src="Img/menu.png" alt="Menú de Sabores" class="menu-img">
+        <img src="Img/menu.png" alt="Menú de Sabores" class="menu-img">
 
+    </section>
+
+
+    <!-- SECCIÓN DE CARTAS CON 3 IMÁGENES -->
+    <section class="cartas">
+        <h2>Explora Nuestras Categorías</h2>
+        <div class="grid-cartas">
+
+            <div class="carta">
+                <div class="carta-imagen">
+                    <img src="Img/img4.jpeg" alt="Helados Clásicos">
+                </div>
+                <div class="carta-contenido">
+                    <h3>🍨 Clásicos</h3>
+                    <p>Los sabores de siempre que nunca pasan de moda.</p>
+                    <a href="#clasicos" class="carta-btn">Ver más</a>
+                </div>
+            </div>
+
+            <div class="carta">
+                <div class="carta-imagen">
+                    <img src="Img/img2.jpeg" alt="Helados Frutales">
+                </div>
+                <div class="carta-contenido">
+                    <h3>🍓 Frutales</h3>
+                    <p>Frescura natural con las mejores frutas de temporada.</p>
+                    <a href="#frutales" class="carta-btn">Ver más</a>
+                </div>
+            </div>
+
+            <div class="carta">
+                <div class="carta-imagen">
+                    <img src="Img/img3.jpeg" alt="Helados Especiales">
+                </div>
+                <div class="carta-contenido">
+                    <h3>✨ Especiales</h3>
+                    <p>Combinaciones únicas que sorprenden a tu paladar.</p>
+                    <a href="#especiales" class="carta-btn">Ver más</a>
+                </div>
+            </div>
+
+        </div>
     </section>
 
 
@@ -69,7 +105,7 @@
 
 
         <!-- CATEGORÍA: CLÁSICOS -->
-        <div class="categoria">
+        <div class="categoria" id="clasicos">
 
             <h3>🍨 Clásicos</h3>
 
@@ -119,7 +155,7 @@
 
 
         <!-- CATEGORÍA: FRUTALES -->
-        <div class="categoria">
+        <div class="categoria" id="frutales">
 
             <h3>🍓 Frutales</h3>
 
@@ -182,7 +218,7 @@
 
 
         <!-- CATEGORÍA: ESPECIALES -->
-        <div class="categoria">
+        <div class="categoria" id="especiales">
 
             <h3>✨ Especiales</h3>
 
@@ -294,9 +330,6 @@
         </div>
 
     </section>
-
-
-   
 
 
     <!-- PIE DE PÁGINA -->
