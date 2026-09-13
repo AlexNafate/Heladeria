@@ -1336,3 +1336,514 @@ body {
         font-size: 1.8rem;
         margin-bottom: 2.5rem;
     }
+}
+/* =====================================
+   PÁGINA NOSOTROS
+   ===================================== */
+
+/* HERO NOSOTROS */
+.hero-nosotros {
+    background-image:
+        linear-gradient(
+            rgba(74, 144, 226, 0.65),
+            rgba(168, 216, 240, 0.65)
+        ),
+        url('Img/fondoxd.png');
+    background-size: cover;
+    background-position: center;
+    padding: 6rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+/* SECCIÓN QUIÉNES SOMOS */
+.nosotros-intro {
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--blanco);
+}
+
+.nosotros-intro h2 {
+    font-size: 2.5rem;
+    color: var(--azul);
+    margin-bottom: 2rem;
+}
+
+.nosotros-texto {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--texto);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* SECCIÓN FILOSOFÍA */
+.nosotros-filosofia {
+    padding: 4rem 2rem;
+    background-color: var(--celeste-claro);
+}
+
+.filosofia-bloque {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    background: var(--blanco);
+    border-radius: 20px;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 6px 25px rgba(74, 144, 226, 0.15);
+    border-left: 6px solid var(--azul);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filosofia-bloque:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 35px rgba(74, 144, 226, 0.25);
+}
+
+.filosofia-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.filosofia-bloque h2 {
+    font-size: 2rem;
+    color: var(--azul);
+    margin-bottom: 1.5rem;
+}
+
+.filosofia-bloque p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: var(--texto);
+}
+
+/* SECCIÓN LO QUE NOS DESTACA */
+.nosotros-destaca {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--blanco);
+}
+
+.nosotros-destaca h2 {
+    font-size: 2.5rem;
+    color: var(--azul);
+    margin-bottom: 3rem;
+}
+
+.grid-destaca {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+}
+
+.destaca-card {
+    background: var(--blanco);
+    border-radius: 15px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.1);
+    border: 2px solid var(--celeste-claro);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.destaca-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--celeste);
+}
+
+.destaca-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.destaca-card h3 {
+    color: var(--azul);
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.destaca-card p {
+    font-size: 0.95rem;
+    color: var(--texto-suave);
+    line-height: 1.6;
+}
+
+/* RESPONSIVE NOSOTROS */
+@media (max-width: 768px) {
+    .nosotros-intro h2,
+    .nosotros-destaca h2 {
+        font-size: 1.8rem;
+    }
+
+    .nosotros-texto {
+        font-size: 1rem;
+    }
+
+    .filosofia-bloque {
+        padding: 2rem 1.5rem;
+    }
+
+    .filosofia-bloque h2 {
+        font-size: 1.6rem;
+    }
+
+    .filosofia-bloque p {
+        font-size: 1rem;
+    }
+
+    .grid-destaca {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .hero-nosotros {
+        padding: 4rem 1.5rem;
+        min-height: 300px;
+    }
+}
+/* =====================================
+   PÁGINA NOSOTROS
+   ===================================== */
+
+/* HERO NOSOTROS */
+.hero-nosotros {
+    background-image:
+        linear-gradient(
+            rgba(74, 144, 226, 0.65),
+            rgba(168, 216, 240, 0.65)
+        ),
+        url('Img/fondoxd.png');
+    background-size: cover;
+    background-position: center;
+    padding: 6rem 2rem;
+    text-align: center;
+    color: white;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SECCIÓN QUIÉNES SOMOS */
+.nosotros-intro {
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--blanco);
+}
+
+.nosotros-intro h2 {
+    font-size: 2.5rem;
+    color: var(--azul);
+    margin-bottom: 2rem;
+}
+
+.nosotros-texto {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--texto);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* SECCIÓN NUESTRA ESENCIA (con imagen) */
+.nosotros-esencia {
+    padding: 4rem 2rem;
+    background-color: var(--celeste-claro);
+}
+
+.esencia-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.esencia-imagen {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(74, 144, 226, 0.25);
+}
+
+.esencia-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.esencia-imagen:hover img {
+    transform: scale(1.05);
+}
+
+.esencia-texto h2 {
+    font-size: 2.2rem;
+    color: var(--azul);
+    margin-bottom: 1.5rem;
+}
+
+.esencia-texto p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--texto);
+    margin-bottom: 1rem;
+}
+
+/* SECCIÓN FILOSOFÍA */
+.nosotros-filosofia {
+    padding: 4rem 2rem;
+    background-color: var(--blanco);
+}
+
+.filosofia-bloque {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    background: var(--blanco);
+    border-radius: 20px;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 6px 25px rgba(74, 144, 226, 0.15);
+    border-left: 6px solid var(--azul);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filosofia-bloque:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 35px rgba(74, 144, 226, 0.25);
+}
+
+.filosofia-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.filosofia-bloque h2 {
+    font-size: 2rem;
+    color: var(--azul);
+    margin-bottom: 1.5rem;
+}
+
+.filosofia-bloque p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: var(--texto);
+}
+
+/* SECCIÓN LO QUE NOS DESTACA */
+.nosotros-destaca {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--celeste-claro);
+}
+
+.nosotros-destaca h2 {
+    font-size: 2.5rem;
+    color: var(--azul);
+    margin-bottom: 3rem;
+}
+
+.grid-destaca {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+}
+
+.destaca-card {
+    background: var(--blanco);
+    border-radius: 15px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.1);
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.destaca-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--celeste);
+}
+
+.destaca-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.destaca-card h3 {
+    color: var(--azul);
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.destaca-card p {
+    font-size: 0.95rem;
+    color: var(--texto-suave);
+    line-height: 1.6;
+}
+
+/* SECCIÓN NUESTRO COMPROMISO */
+.nosotros-compromiso {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--blanco);
+}
+
+.nosotros-compromiso h2 {
+    font-size: 2.5rem;
+    color: var(--azul);
+    margin-bottom: 3rem;
+}
+
+.grid-compromiso {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.compromiso-item {
+    background: var(--blanco);
+    border-radius: 20px;
+    padding: 2.5rem 1.8rem;
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.12);
+    border: 2px solid var(--celeste-claro);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.compromiso-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(74, 144, 226, 0.25);
+}
+
+.compromiso-numero {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--celeste);
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.compromiso-item h3 {
+    color: var(--azul);
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.compromiso-item p {
+    font-size: 0.98rem;
+    color: var(--texto-suave);
+    line-height: 1.7;
+}
+
+/* RESPONSIVE NOSOTROS */
+@media (max-width: 768px) {
+    .nosotros-intro h2,
+    .nosotros-destaca h2,
+    .nosotros-compromiso h2 {
+        font-size: 1.8rem;
+    }
+
+    .nosotros-texto {
+        font-size: 1rem;
+    }
+
+    .esencia-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .esencia-texto h2 {
+        font-size: 1.7rem;
+    }
+
+    .esencia-texto p {
+        font-size: 1rem;
+    }
+
+    .filosofia-bloque {
+        padding: 2rem 1.5rem;
+    }
+
+    .filosofia-bloque h2 {
+        font-size: 1.6rem;
+    }
+
+    .filosofia-bloque p {
+        font-size: 1rem;
+    }
+
+    .grid-destaca {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .grid-compromiso {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .compromiso-numero {
+        font-size: 2.2rem;
+    }
+
+    .hero-nosotros {
+        padding: 4rem 1.5rem;
+        min-height: 260px;
+    }
+}
+/* DISEÑO DECORATIVO EN LUGAR DE IMAGEN */
+.esencia-decorativa {
+    background: linear-gradient(135deg, var(--azul), var(--celeste));
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 3rem 2rem;
+    min-height: 400px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(74, 144, 226, 0.25);
+    text-align: center;
+}
+
+.esencia-emoji {
+    font-size: 4rem;
+    animation: flotar 3s ease-in-out infinite;
+}
+
+.esencia-emoji:nth-child(2) { animation-delay: 0.3s; }
+.esencia-emoji:nth-child(3) { animation-delay: 0.6s; }
+.esencia-emoji:nth-child(4) { animation-delay: 0.9s; }
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.esencia-texto-deco {
+    width: 100%;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    margin-top: 1rem;
+}
+
+.esencia-subtexto-deco {
+    width: 100%;
+    font-size: 1.2rem;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    letter-spacing: 2px;
+}
