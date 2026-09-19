@@ -1847,3 +1847,403 @@ body {
     text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
     letter-spacing: 2px;
 }
+/* =========================================
+   CATÁLOGO DE SABORES
+   ========================================= */
+
+/* Encabezado del catálogo */
+
+.catalogo-hero {
+    min-height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    background:
+        linear-gradient(
+            rgba(151, 199, 235, 0.80),
+            rgba(225, 241, 249, 0.90)
+        ),
+        url('Img/fondoxd.png') center/cover no-repeat;
+}
+
+.catalogo-hero-contenido {
+    max-width: 800px;
+    padding: 45px 35px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.30);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 10px 35px rgba(70, 110, 150, 0.15);
+}
+
+.catalogo-etiqueta {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 8px 18px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.80);
+    color: #5b7fc4;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.catalogo-hero h1 {
+    margin: 0 0 15px;
+    color: #ffffff;
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.20);
+}
+
+.catalogo-hero p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+
+/* Introducción */
+
+.catalogo-intro {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 70px 20px 40px;
+    text-align: center;
+}
+
+.catalogo-intro h2 {
+    margin-bottom: 15px;
+    color: #5b7fc4;
+    font-size: clamp(2rem, 4vw, 2.7rem);
+}
+
+.catalogo-intro p {
+    margin: 0 auto;
+    max-width: 700px;
+    color: #666;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+
+/* Categorías */
+
+.catalogo-categoria {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 45px 20px 70px;
+}
+
+.categoria-frutales {
+    max-width: none;
+    padding-left: max(20px, calc((100% - 1150px) / 2));
+    padding-right: max(20px, calc((100% - 1150px) / 2);
+    background: rgba(218, 241, 250, 0.35);
+}
+
+.categoria-sin-lactosa {
+    margin-bottom: 30px;
+}
+
+
+/* Título de cada categoría */
+
+.categoria-titulo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 35px;
+}
+
+.categoria-titulo > span {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: rgba(177, 210, 241, 0.35);
+    font-size: 2rem;
+}
+
+.categoria-titulo h2 {
+    margin: 0 0 5px;
+    color: #4f73b5;
+    font-size: 2rem;
+}
+
+.categoria-titulo p {
+    margin: 0;
+    color: #777;
+}
+
+
+/* Grid */
+
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* Tarjeta */
+
+.producto-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 320px;
+    overflow: hidden;
+    border-radius: 22px;
+    background: #ffffff;
+    border: 1px solid rgba(120, 160, 210, 0.15);
+    box-shadow: 0 8px 25px rgba(80, 110, 150, 0.10);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.producto-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(80, 110, 150, 0.18);
+}
+
+
+/* Parte superior de la tarjeta */
+
+.producto-icono {
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(178, 218, 244, 0.45),
+            rgba(235, 225, 249, 0.65)
+        );
+    font-size: 4.2rem;
+}
+
+
+/* Contenido */
+
+.producto-contenido {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 22px;
+}
+
+.producto-categoria {
+    align-self: flex-start;
+    margin-bottom: 10px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: #edf5fc;
+    color: #6284bc;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.producto-contenido h3 {
+    margin: 0 0 10px;
+    color: #444;
+    font-size: 1.35rem;
+}
+
+.producto-contenido p {
+    margin: 0;
+    color: #777;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+
+/* Precio y presentación */
+
+.producto-final {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.producto-precio {
+    color: #5b7fc4;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.producto-precio small {
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.producto-presentacion {
+    padding: 7px 10px;
+    border-radius: 15px;
+    background: #f6f8fb;
+    color: #777;
+    font-size: 0.78rem;
+}
+
+
+/* Tarjetas especiales */
+
+.producto-especial .producto-icono {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(231, 207, 246, 0.55),
+            rgba(252, 226, 239, 0.70)
+        );
+}
+
+.producto-especial .producto-categoria {
+    background: #f5eafa;
+    color: #986bb4;
+}
+
+
+/* Nota final */
+
+.catalogo-nota {
+    max-width: 1000px;
+    margin: 10px auto 70px;
+    padding: 30px 35px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    border-radius: 22px;
+    background:
+        linear-gradient(
+            135deg,
+            #eef7fc,
+            #f5f0fb
+        );
+    box-shadow: 0 8px 25px rgba(80, 110, 150, 0.08);
+}
+
+.nota-icono {
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: white;
+    font-size: 2rem;
+}
+
+.catalogo-nota h3 {
+    margin: 0 0 8px;
+    color: #5578b7;
+    font-size: 1.35rem;
+}
+
+.catalogo-nota p {
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   DISEÑO RESPONSIVO
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .catalogo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .catalogo-hero {
+        min-height: 320px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .catalogo-hero {
+        min-height: 300px;
+        padding: 60px 15px;
+    }
+
+    .catalogo-hero-contenido {
+        padding: 30px 20px;
+    }
+
+    .catalogo-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .catalogo-hero p {
+        font-size: 1rem;
+    }
+
+    .catalogo-intro {
+        padding: 50px 20px 25px;
+    }
+
+    .catalogo-categoria,
+    .categoria-frutales {
+        padding: 40px 20px 55px;
+    }
+
+    .categoria-titulo {
+        align-items: flex-start;
+    }
+
+    .categoria-titulo > span {
+        width: 52px;
+        height: 52px;
+        font-size: 1.6rem;
+    }
+
+    .categoria-titulo h2 {
+        font-size: 1.6rem;
+    }
+
+    .catalogo-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .producto-card {
+        min-height: 300px;
+    }
+
+    .catalogo-nota {
+        margin: 10px 20px 50px;
+        padding: 25px 20px;
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .producto-final {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .producto-precio {
+        font-size: 1.6rem;
+    }
+
+}
