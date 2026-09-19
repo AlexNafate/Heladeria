@@ -33,6 +33,7 @@ body {
     color: var(--texto);
     background-color: var(--blanco);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* =====================================
@@ -47,7 +48,7 @@ body {
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
     box-shadow: 0 2px 10px rgba(74, 144, 226, 0.3);
     transition: padding 0.4s ease, background-color 0.4s ease;
 }
@@ -75,12 +76,12 @@ body {
     height: 55px;
     width: auto;
     transition: transform 0.3s ease, filter 0.3s ease;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .logo a:hover .logo-img {
     transform: scale(1.08) rotate(-5deg);
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
 
 .logo-texto {
@@ -88,7 +89,7 @@ body {
     font-weight: bold;
     color: white;
     letter-spacing: 1px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     transition: color 0.3s ease;
     white-space: nowrap;
 }
@@ -139,6 +140,7 @@ body {
     color: white;
     font-size: 1.8rem;
     cursor: pointer;
+    padding: 5px 10px;
 }
 
 /* =====================================
@@ -187,14 +189,8 @@ body {
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* =====================================
@@ -370,7 +366,8 @@ body {
    ===================================== */
 .hero-sabores,
 .hero-mision,
-.hero-promociones {
+.hero-promociones,
+.hero-nosotros {
     background-image:
         linear-gradient(
             rgba(74, 144, 226, 0.65),
@@ -382,6 +379,10 @@ body {
     padding: 6rem 2rem;
     text-align: center;
     color: white;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* =====================================
@@ -554,13 +555,13 @@ body {
 .cta h2 {
     font-size: 2.2rem;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .cta p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .cta .btn {
@@ -657,12 +658,8 @@ body {
 }
 
 @keyframes pulse {
-    0%, 100% {
-        transform: translateX(-50%) scale(1);
-    }
-    50% {
-        transform: translateX(-50%) scale(1.05);
-    }
+    0%, 100% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-50%) scale(1.05); }
 }
 
 .promo-icon {
@@ -1112,251 +1109,8 @@ body {
 }
 
 /* =====================================
-   RESPONSIVE - TABLET (max 900px)
-   ===================================== */
-@media (max-width: 900px) {
-    .grid-sabores {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .nav {
-        gap: 1rem;
-    }
-
-    .nav a {
-        font-size: 0.9rem;
-    }
-}
-
-/* =====================================
-   RESPONSIVE - MÓVIL (max 768px)
-   ===================================== */
-@media (max-width: 768px) {
-
-    /* HEADER */
-    .header {
-        padding: 12px 18px;
-    }
-
-    .logo-img {
-        height: 45px;
-    }
-
-    .logo-texto {
-        font-size: 1.2rem;
-    }
-
-    /* NAV MÓVIL */
-    .nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: var(--azul);
-        width: 100%;
-        padding: 1rem;
-        gap: 0;
-        animation: fadeIn 0.4s ease;
-    }
-
-    .nav.active {
-        display: flex;
-    }
-
-    .nav a {
-        margin: 0.5rem 0;
-        padding: 0.8rem;
-        width: 100%;
-        text-align: center;
-    }
-
-    .menu-btn {
-        display: block;
-    }
-
-    /* HERO */
-    .hero {
-        min-height: 400px;
-        padding: 30px 15px;
-    }
-
-    .hero-content {
-        padding: 20px 15px;
-    }
-
-    .hero-content h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    /* HERO SABORES / MISIÓN / PROMOS */
-    .hero-sabores,
-    .hero-mision,
-    .hero-promociones {
-        padding: 4rem 1.5rem;
-        min-height: 300px;
-    }
-
-    /* SECCIÓN SABORES */
-    .sabores {
-        padding: 3rem 1.2rem;
-    }
-
-    .sabores h2,
-    .promociones h2,
-    .contacto h2 {
-        font-size: 1.6rem;
-    }
-
-    .grid-sabores {
-        grid-template-columns: 1fr;
-        gap: 1.2rem;
-    }
-
-    /* PROMOCIONES */
-    .promociones {
-        padding: 3rem 1.2rem;
-    }
-
-    .promo {
-        padding: 1.5rem;
-    }
-
-    /* IMAGEN DEL MENÚ */
-    .menu-imagen {
-        padding: 20px 12px;
-    }
-
-    .menu-imagen img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-    }
-
-    /* CARTAS (3 imágenes) */
-    .cartas {
-        padding: 3rem 1.2rem;
-    }
-
-    .cartas h2 {
-        font-size: 1.6rem;
-        margin-bottom: 2rem;
-    }
-
-    .grid-cartas {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .carta-imagen {
-        height: 200px;
-    }
-
-    .carta-contenido h3 {
-        font-size: 1.3rem;
-    }
-
-    /* PALETAS (2 imágenes) */
-    .paletas {
-        padding: 3rem 1.2rem;
-    }
-
-    .paletas h2 {
-        font-size: 1.6rem;
-    }
-
-    .paletas-descripcion {
-        font-size: 1rem;
-        margin-bottom: 2rem;
-    }
-
-    .grid-paletas {
-        grid-template-columns: 1fr;
-        gap: 1.8rem;
-    }
-
-    .paleta-imagen {
-        height: 280px;
-    }
-
-    .paleta-info {
-        padding: 1.5rem 1.2rem;
-    }
-
-    .paleta-info h3 {
-        font-size: 1.2rem;
-    }
-
-    /* SABORES COMPLETOS */
-    .sabores-completos {
-        padding: 3rem 1.2rem;
-    }
-
-    .sabores-completos h2 {
-        font-size: 1.8rem;
-        margin-bottom: 2rem;
-    }
-
-    .categoria h3 {
-        font-size: 1.4rem;
-    }
-
-    .categoria {
-        scroll-margin-top: 70px;
-    }
-
-    /* MISIÓN Y VISIÓN */
-    .mision-vision {
-        padding: 3rem 1.2rem;
-    }
-
-    .bloque {
-        padding: 2rem 1.5rem;
-    }
-
-    .bloque h2 {
-        font-size: 1.6rem;
-    }
-
-    .bloque p {
-        font-size: 1rem;
-    }
-
-    /* VALORES */
-    .valores {
-        padding: 3rem 1.2rem;
-    }
-
-    .valores h2 {
-        font-size: 1.8rem;
-        margin-bottom: 2.5rem;
-    }
-}
-/* =====================================
    PÁGINA NOSOTROS
    ===================================== */
-
-/* HERO NOSOTROS */
-.hero-nosotros {
-    background-image:
-        linear-gradient(
-            rgba(74, 144, 226, 0.65),
-            rgba(168, 216, 240, 0.65)
-        ),
-        url('Img/fondoxd.png');
-    background-size: cover;
-    background-position: center;
-    padding: 6rem 2rem;
-    text-align: center;
-    color: white;
-}
-
-/* SECCIÓN QUIÉNES SOMOS */
 .nosotros-intro {
     padding: 4rem 2rem;
     max-width: 900px;
@@ -1379,179 +1133,6 @@ body {
     margin: 0 auto;
 }
 
-/* SECCIÓN FILOSOFÍA */
-.nosotros-filosofia {
-    padding: 4rem 2rem;
-    background-color: var(--celeste-claro);
-}
-
-.filosofia-bloque {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-    background: var(--blanco);
-    border-radius: 20px;
-    padding: 3rem 2.5rem;
-    box-shadow: 0 6px 25px rgba(74, 144, 226, 0.15);
-    border-left: 6px solid var(--azul);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.filosofia-bloque:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 35px rgba(74, 144, 226, 0.25);
-}
-
-.filosofia-icon {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-}
-
-.filosofia-bloque h2 {
-    font-size: 2rem;
-    color: var(--azul);
-    margin-bottom: 1.5rem;
-}
-
-.filosofia-bloque p {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    margin-bottom: 1rem;
-    color: var(--texto);
-}
-
-/* SECCIÓN LO QUE NOS DESTACA */
-.nosotros-destaca {
-    padding: 4rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    background-color: var(--blanco);
-}
-
-.nosotros-destaca h2 {
-    font-size: 2.5rem;
-    color: var(--azul);
-    margin-bottom: 3rem;
-}
-
-.grid-destaca {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 2rem;
-}
-
-.destaca-card {
-    background: var(--blanco);
-    border-radius: 15px;
-    padding: 2rem 1.5rem;
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.1);
-    border: 2px solid var(--celeste-claro);
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.destaca-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--celeste);
-}
-
-.destaca-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.destaca-card h3 {
-    color: var(--azul);
-    margin-bottom: 0.8rem;
-    font-size: 1.2rem;
-}
-
-.destaca-card p {
-    font-size: 0.95rem;
-    color: var(--texto-suave);
-    line-height: 1.6;
-}
-
-/* RESPONSIVE NOSOTROS */
-@media (max-width: 768px) {
-    .nosotros-intro h2,
-    .nosotros-destaca h2 {
-        font-size: 1.8rem;
-    }
-
-    .nosotros-texto {
-        font-size: 1rem;
-    }
-
-    .filosofia-bloque {
-        padding: 2rem 1.5rem;
-    }
-
-    .filosofia-bloque h2 {
-        font-size: 1.6rem;
-    }
-
-    .filosofia-bloque p {
-        font-size: 1rem;
-    }
-
-    .grid-destaca {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .hero-nosotros {
-        padding: 4rem 1.5rem;
-        min-height: 300px;
-    }
-}
-/* =====================================
-   PÁGINA NOSOTROS
-   ===================================== */
-
-/* HERO NOSOTROS */
-.hero-nosotros {
-    background-image:
-        linear-gradient(
-            rgba(74, 144, 226, 0.65),
-            rgba(168, 216, 240, 0.65)
-        ),
-        url('Img/fondoxd.png');
-    background-size: cover;
-    background-position: center;
-    padding: 6rem 2rem;
-    text-align: center;
-    color: white;
-    min-height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* SECCIÓN QUIÉNES SOMOS */
-.nosotros-intro {
-    padding: 4rem 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-    background-color: var(--blanco);
-}
-
-.nosotros-intro h2 {
-    font-size: 2.5rem;
-    color: var(--azul);
-    margin-bottom: 2rem;
-}
-
-.nosotros-texto {
-    font-size: 1.15rem;
-    line-height: 1.9;
-    color: var(--texto);
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* SECCIÓN NUESTRA ESENCIA (con imagen) */
 .nosotros-esencia {
     padding: 4rem 2rem;
     background-color: var(--celeste-claro);
@@ -1597,7 +1178,6 @@ body {
     margin-bottom: 1rem;
 }
 
-/* SECCIÓN FILOSOFÍA */
 .nosotros-filosofia {
     padding: 4rem 2rem;
     background-color: var(--blanco);
@@ -1638,7 +1218,6 @@ body {
     color: var(--texto);
 }
 
-/* SECCIÓN LO QUE NOS DESTACA */
 .nosotros-destaca {
     padding: 4rem 2rem;
     max-width: 1200px;
@@ -1664,202 +1243,15 @@ body {
     border-radius: 15px;
     padding: 2rem 1.5rem;
     box-shadow: 0 4px 15px rgba(74, 144, 226, 0.1);
-    border: 2px solid transparent;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.destaca-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--celeste);
-}
-
-.destaca-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.destaca-card h3 {
-    color: var(--azul);
-    margin-bottom: 0.8rem;
-    font-size: 1.2rem;
-}
-
-.destaca-card p {
-    font-size: 0.95rem;
-    color: var(--texto-suave);
-    line-height: 1.6;
-}
-
-/* SECCIÓN NUESTRO COMPROMISO */
-.nosotros-compromiso {
-    padding: 4rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    background-color: var(--blanco);
-}
-
-.nosotros-compromiso h2 {
-    font-size: 2.5rem;
-    color: var(--azul);
-    margin-bottom: 3rem;
-}
-
-.grid-compromiso {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2rem;
-}
-
-.compromiso-item {
-    background: var(--blanco);
-    border-radius: 20px;
-    padding: 2.5rem 1.8rem;
-    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.12);
-    border: 2px solid var(--celeste-claro);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-}
-
-.compromiso-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(74, 144, 226, 0.25);
-}
-
-.compromiso-numero {
-    font-size: 3rem;
-    font-weight: bold;
-    color: var(--celeste);
-    line-height: 1;
-    margin-bottom: 1rem;
-}
-
-.compromiso-item h3 {
-    color: var(--azul);
-    font-size: 1.3rem;
-    margin-bottom: 0.8rem;
-}
-
-.compromiso-item p {
-    font-size: 0.98rem;
-    color: var(--texto-suave);
-    line-height: 1.7;
-}
-
-/* RESPONSIVE NOSOTROS */
-@media (max-width: 768px) {
-    .nosotros-intro h2,
-    .nosotros-destaca h2,
-    .nosotros-compromiso h2 {
-        font-size: 1.8rem;
-    }
-
-    .nosotros-texto {
-        font-size: 1rem;
-    }
-
-    .esencia-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .esencia-texto h2 {
-        font-size: 1.7rem;
-    }
-
-    .esencia-texto p {
-        font-size: 1rem;
-    }
-
-    .filosofia-bloque {
-        padding: 2rem 1.5rem;
-    }
-
-    .filosofia-bloque h2 {
-        font-size: 1.6rem;
-    }
-
-    .filosofia-bloque p {
-        font-size: 1rem;
-    }
-
-    .grid-destaca {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .grid-compromiso {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .compromiso-numero {
-        font-size: 2.2rem;
-    }
-
-    .hero-nosotros {
-        padding: 4rem 1.5rem;
-        min-height: 260px;
-    }
-}
-/* DISEÑO DECORATIVO EN LUGAR DE IMAGEN */
-.esencia-decorativa {
-    background: linear-gradient(135deg, var(--azul), var(--celeste));
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    padding: 3rem 2rem;
-    min-height: 400px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(74, 144, 226, 0.25);
-    text-align: center;
-}
-
-.esencia-emoji {
-    font-size: 4rem;
-    animation: flotar 3s ease-in-out infinite;
-}
-
-.esencia-emoji:nth-child(2) { animation-delay: 0.3s; }
-.esencia-emoji:nth-child(3) { animation-delay: 0.6s; }
-.esencia-emoji:nth-child(4) { animation-delay: 0.9s; }
-
-@keyframes flotar {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-}
-
-.esencia-texto-deco {
-    width: 100%;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: white;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
-    margin-top: 1rem;
-}
-
-.esencia-subtexto-deco {
-    width: 100%;
-    font-size: 1.2rem;
-    color: white;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
-    letter-spacing: 2px;
-}
-/* =========================================================
-   CATÁLOGO DE SABORES - DISEÑO PROFESIONAL
+    transition: transform 0.3s ease;
+    border: 2px solid transparent;}
+    /* =========================================================
+   CATÁLOGO DE SABORES - DISEÑO COMPLETO (FIX)
    ========================================================= */
 
-/* Fondo general del catálogo */
-body {
-    background-color: #f8fafc;
-}
-
 /* =========================================================
-   ENCABEZADO DEL CATÁLOGO
+   ENCABEZADO DEL CATÁLOGO (HERO)
    ========================================================= */
-
 .catalogo-hero {
     min-height: 380px;
     display: flex;
@@ -1886,70 +1278,40 @@ body {
     border-radius: 18px;
 
     backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 
-    box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.15);
-}
-
-.catalogo-etiqueta {
-    display: inline-block;
-    margin-bottom: 18px;
-    padding: 7px 16px;
-
-    background: rgba(255, 255, 255, 0.92);
-    color: var(--azul-oscuro);
-
-    border-radius: 20px;
-
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .catalogo-hero h1 {
     margin: 0 0 15px;
-
     color: #ffffff;
-
     font-size: clamp(2.4rem, 5vw, 4rem);
     font-weight: 700;
-
-    text-shadow:
-        0 3px 10px rgba(0, 0, 0, 0.30);
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.30);
 }
 
 .catalogo-hero p {
     margin: 0;
-
     color: #ffffff;
-
     font-size: 1.1rem;
     line-height: 1.7;
-
-    text-shadow:
-        0 2px 5px rgba(0, 0, 0, 0.20);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.20);
 }
-
 
 /* =========================================================
    INTRODUCCIÓN
    ========================================================= */
-
 .catalogo-intro {
     max-width: 850px;
     margin: 0 auto;
-
     padding: 65px 20px 35px;
-
     text-align: center;
 }
 
 .catalogo-intro h2 {
     margin-bottom: 12px;
-
     color: var(--azul-oscuro);
-
     font-size: clamp(2rem, 4vw, 2.7rem);
     font-weight: 700;
 }
@@ -1957,677 +1319,39 @@ body {
 .catalogo-intro p {
     max-width: 700px;
     margin: 0 auto;
-
     color: #64748b;
-
     font-size: 1.05rem;
     line-height: 1.8;
 }
 
-
 /* =========================================================
-   CATEGORÍAS
+   GALERÍA DESTACADA
    ========================================================= */
-
-.catalogo-categoria {
-    max-width: 1150px;
-
-    margin: 0 auto;
-
-    padding: 40px 20px 65px;
+.catalogo-galeria {
+    background-color: #f8fafc;
+    padding: 60px 20px;
 }
 
-.categoria-frutales {
-    max-width: none;
-
-    padding-left: max(20px, calc((100% - 1150px) / 2));
-    padding-right: max(20px, calc((100% - 1150px) / 2));
-
-    background-color: #eef7fc;
-}
-
-.categoria-sin-lactosa {
-    margin-bottom: 20px;
-}
-
-
-/* =========================================================
-   TÍTULO DE CATEGORÍA
-   ========================================================= */
-
-.categoria-titulo {
-    display: flex;
-    align-items: center;
-
-    gap: 18px;
-
-    margin-bottom: 30px;
-
-    padding-bottom: 15px;
-
-    border-bottom: 1px solid #dbe7f0;
-}
-
-/*
-   Ocultamos los emojis/iconos decorativos.
-   Así el catálogo queda más profesional.
-*/
-.categoria-titulo > span {
-    display: none;
-}
-
-.categoria-titulo h2 {
-    margin: 0 0 5px;
-
-    color: var(--azul-oscuro);
-
-    font-size: 1.9rem;
-    font-weight: 700;
-}
-
-.categoria-titulo p {
-    margin: 0;
-
-    color: #64748b;
-
-    font-size: 0.95rem;
-}
-
-
-/* =========================================================
-   GRID DE PRODUCTOS
-   ========================================================= */
-
-.catalogo-grid {
-    display: grid;
-
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-
-    gap: 24px;
-}
-
-
-/* =========================================================
-   TARJETAS DE PRODUCTOS
-   ========================================================= */
-
-.producto-card {
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-
-    min-height: 290px;
-
-    overflow: hidden;
-
-    background: #ffffff;
-
-    border: 1px solid #e2e8f0;
-    border-radius: 16px;
-
-    box-shadow:
-        0 5px 18px rgba(30, 64, 95, 0.08);
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        border-color 0.25s ease;
-}
-
-.producto-card:hover {
-    transform: translateY(-6px);
-
-    border-color: #b7d3e8;
-
-    box-shadow:
-        0 14px 30px rgba(30, 64, 95, 0.14);
-}
-
-
-/* =========================================================
-   PARTE SUPERIOR
-   ========================================================= */
-
-/*
-   Ocultamos el bloque de emojis.
-   Si posteriormente quieres colocar imágenes de los sabores,
-   aquí podemos agregarlas.
-*/
-.producto-icono {
-    display: none;
-}
-
-
-/* =========================================================
-   CONTENIDO
-   ========================================================= */
-
-.producto-contenido {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-
-    padding: 24px;
-}
-
-.producto-categoria {
-    align-self: flex-start;
-
-    margin-bottom: 12px;
-
-    padding: 5px 11px;
-
-    background-color: #edf5fb;
-    color: #47729d;
-
-    border-radius: 5px;
-
-    font-size: 0.72rem;
-    font-weight: 700;
-
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-}
-
-.producto-contenido h3 {
-    margin: 0 0 10px;
-
-    color: #1e293b;
-
-    font-size: 1.3rem;
-    font-weight: 700;
-}
-
-.producto-contenido p {
-    margin: 0;
-
-    color: #64748b;
-
-    font-size: 0.95rem;
-    line-height: 1.65;
-}
-
-
-/* =========================================================
-   PRECIO Y PRESENTACIÓN
-   ========================================================= */
-
-.producto-final {
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 15px;
-
-    margin-top: auto;
-    padding-top: 22px;
-
-    border-top: 1px solid #edf1f5;
-}
-
-.producto-precio {
-    color: var(--azul-oscuro);
-
-    font-size: 1.45rem;
-    font-weight: 800;
-}
-
-.producto-precio small {
-    font-size: 0.7rem;
-    font-weight: 600;
-}
-
-.producto-presentacion {
-    padding: 6px 10px;
-
-    background-color: #f5f7fa;
-
-    color: #64748b;
-
-    border-radius: 6px;
-
-    font-size: 0.76rem;
-}
-
-
-/* =========================================================
-   PRODUCTOS ESPECIALES
-   ========================================================= */
-
-.producto-especial {
-    border-color: #d9cde7;
-}
-
-.producto-especial:hover {
-    border-color: #bda6d3;
-}
-
-.producto-especial .producto-categoria {
-    background-color: #f3edf8;
-    color: #80619a;
-}
-
-
-/* =========================================================
-   NOTA FINAL DEL CATÁLOGO
-   ========================================================= */
-
-.catalogo-nota {
-    max-width: 1000px;
-
-    margin: 10px auto 70px;
-
-    padding: 25px 30px;
-
-    display: flex;
-    align-items: center;
-
-    gap: 20px;
-
-    background-color: #ffffff;
-
-    border: 1px solid #e2e8f0;
-    border-left: 4px solid var(--azul);
-
-    border-radius: 12px;
-
-    box-shadow:
-        0 5px 18px rgba(30, 64, 95, 0.06);
-}
-
-
-/* Ocultar icono/emojis de la nota */
-.nota-icono {
-    display: none;
-}
-
-.catalogo-nota h3 {
-    margin: 0 0 6px;
-
-    color: var(--azul-oscuro);
-
-    font-size: 1.15rem;
-}
-
-.catalogo-nota p {
-    margin: 0;
-
-    color: #64748b;
-
-    font-size: 0.92rem;
-    line-height: 1.6;
-}
-
-
-/* =========================================================
-   RESPONSIVE - TABLET
-   ========================================================= */
-
-@media (max-width: 900px) {
-
-    .catalogo-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .catalogo-hero {
-        min-height: 330px;
-    }
-
-    .catalogo-hero-contenido {
-        padding: 35px 25px;
-    }
-}
-
-
-/* =========================================================
-   RESPONSIVE - MÓVIL
-   ========================================================= */
-
-@media (max-width: 600px) {
-
-    .catalogo-hero {
-        min-height: 300px;
-
-        padding: 55px 15px;
-    }
-
-    .catalogo-hero-contenido {
-        padding: 30px 20px;
-
-        border-radius: 14px;
-    }
-
-    .catalogo-hero h1 {
-        font-size: 2.2rem;
-    }
-
-    .catalogo-hero p {
-        font-size: 0.95rem;
-    }
-
-    .catalogo-intro {
-        padding: 50px 20px 25px;
-    }
-
-    .catalogo-intro h2 {
-        font-size: 2rem;
-    }
-
-    .catalogo-categoria,
-    .categoria-frutales {
-        padding: 40px 20px 50px;
-    }
-
-    .categoria-titulo {
-        align-items: flex-start;
-
-        margin-bottom: 25px;
-    }
-
-    .categoria-titulo h2 {
-        font-size: 1.55rem;
-    }
-
-    .categoria-titulo p {
-        font-size: 0.9rem;
-    }
-
-    .catalogo-grid {
-        grid-template-columns: 1fr;
-
-        gap: 18px;
-    }
-
-    .producto-card {
-        min-height: 270px;
-    }
-
-    .producto-contenido {
-        padding: 21px;
-    }
-
-    .producto-contenido h3 {
-        font-size: 1.25rem;
-    }
-
-    .catalogo-nota {
-        margin: 10px 20px 50px;
-
-        padding: 22px 20px;
-    }
-}
-
-
-/* =========================================================
-   MÓVILES PEQUEÑOS
-   ========================================================= */
-
-@media (max-width: 400px) {
-
-    .producto-final {
-        align-items: flex-start;
-
-        flex-direction: column;
-    }
-
-    .producto-precio {
-        font-size: 1.35rem;
-    }
-}
-
-/* =========================================
-   MEJORAS CON BOOTSTRAP
-========================================= */
-
-/* DESCRIPCIONES */
-
-.sabores-descripcion,
-.paletas-descripcion {
+.catalogo-descripcion {
     max-width: 650px;
 }
 
-
-/* =========================================
-   CARDS DE SABORES
-========================================= */
-
-.sabor-inicio-card {
-    border-radius: 22px !important;
+/* =========================================================
+   TARJETAS DE SABORES (GALERÍA)
+   ========================================================= */
+.sabor-card {
+    border-radius: 15px !important;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: #ffffff;
-}
-
-.sabor-inicio-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.13) !important;
-}
-
-.sabor-icono {
-    font-size: 55px;
-    text-align: center;
-    padding-top: 25px;
-    padding-bottom: 5px;
-    transition: transform 0.3s ease;
-}
-
-.sabor-inicio-card:hover .sabor-icono {
-    transform: scale(1.12);
-}
-
-.sabor-inicio-card .card-title {
-    font-size: 21px;
-    font-weight: 700;
-}
-
-.sabor-inicio-card .card-text {
-    line-height: 1.6;
-    min-height: 50px;
-}
-
-
-/* =========================================
-   PRECIO
-========================================= */
-
-.sabor-inicio-card .precio {
-    display: inline-block;
-    margin-top: 8px;
-    padding: 7px 18px;
-    border-radius: 50px;
-    background: #fff1f1;
-    color: #d86b72;
-    font-weight: 700;
-    font-size: 17px;
-}
-
-
-/* =========================================
-   BOTÓN CATÁLOGO
-========================================= */
-
-.btn-catalogo {
-    background: #d86b72;
-    color: white;
-    border: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.btn-catalogo:hover {
-    background: #c6535b;
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 18px rgba(216, 107, 114, 0.30);
-}
-
-
-/* =========================================
-   PALETAS
-========================================= */
-
-.paleta-card {
-    border-radius: 22px !important;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.paleta-card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.14) !important;
-}
-
-.paleta-imagen {
-    height: 280px;
-    overflow: hidden;
-}
-
-.paleta-imagen img {
-    width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
 }
 
-.paleta-card:hover .paleta-imagen img {
-    transform: scale(1.06);
+.sabor-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(74, 144, 226, 0.25) !important;
 }
 
-.paleta-info {
-    padding: 25px !important;
-}
-
-.paleta-info h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.paleta-info p {
-    line-height: 1.6;
-}
-
-.paleta-info .badge {
-    background: #fff1f1;
-    color: #d86b72;
-    padding: 8px 14px;
-}
-
-
-/* =========================================
-   PROMOCIONES
-========================================= */
-
-.promo-card {
-    border-radius: 22px !important;
-    transition: all 0.3s ease;
-}
-
-.promo-card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.13) !important;
-}
-
-.promo-icono {
-    font-size: 48px;
-    margin-bottom: 15px;
-}
-
-.promo-card h3 {
-    font-size: 21px;
-    font-weight: 700;
-}
-
-.promo-card p {
-    line-height: 1.6;
-}
-
-.promo-card .badge {
-    background: #fff1f1;
-    color: #d86b72;
-    padding: 8px 14px;
-}
-
-
-/* =========================================
-   HERO
-========================================= */
-
-.hero-content .badge {
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.hero-content .btn {
-    transition: all 0.3s ease;
-}
-
-.hero-content .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-
-/* =========================================
-   FOOTER
-========================================= */
-
-.footer .redes {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.footer .redes a {
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.footer .redes a:hover {
-    transform: translateY(-2px);
-}
-
-
-/* =========================================
-   RESPONSIVE
-========================================= */
-
-@media (max-width: 768px) {
-
-    .hero-content h1 {
-        font-size: 38px;
-    }
-
-    .hero-content p {
-        font-size: 16px;
-    }
-
-    .paleta-imagen {
-        height: 240px;
-    }
-
-}
-
-
-@media (max-width: 576px) {
-
-    .hero-content h1 {
-        font-size: 32px;
-    }
-
-    .sabor-icono {
-        font-size: 48px;
-    }
-
-    .paleta-imagen {
-        height: 220px;
-    }
-
-}
-/* =====================================
-   IMÁGENES DE LAS TARJETAS DE CATÁLOGO
-   ===================================== */
 .sabor-imagen {
     position: relative;
     width: 100%;
@@ -2657,18 +1381,7 @@ body {
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: bold;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-.sabor-card {
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.sabor-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(74, 144, 226, 0.25) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .precio-sabor {
@@ -2686,8 +1399,413 @@ body {
     font-size: 1.5rem;
 }
 
-@media (max-width: 768px) {
+/* =========================================================
+   CATEGORÍAS DEL CATÁLOGO
+   ========================================================= */
+.catalogo-categoria {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 40px 20px 65px;
+}
+
+.categoria-frutales {
+    max-width: none;
+    padding-left: max(20px, calc((100% - 1150px) / 2));
+    padding-right: max(20px, calc((100% - 1150px) / 2));
+    background-color: #eef7fc;
+}
+
+.categoria-sin-lactosa {
+    margin-bottom: 20px;
+}
+
+.categoria-titulo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dbe7f0;
+}
+
+.categoria-titulo > span {
+    display: none;
+}
+
+.categoria-titulo h2 {
+    margin: 0 0 5px;
+    color: var(--azul-oscuro);
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+.categoria-titulo p {
+    margin: 0;
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+/* =========================================================
+   GRID DE PRODUCTOS
+   ========================================================= */
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* =========================================================
+   TARJETAS DE PRODUCTOS
+   ========================================================= */
+.producto-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 290px;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(30, 64, 95, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.producto-card:hover {
+    transform: translateY(-6px);
+    border-color: #b7d3e8;
+    box-shadow: 0 14px 30px rgba(30, 64, 95, 0.14);
+}
+
+.producto-icono {
+    display: none;
+}
+
+.producto-contenido {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 24px;
+}
+
+.producto-categoria {
+    align-self: flex-start;
+    margin-bottom: 12px;
+    padding: 5px 11px;
+    background-color: #edf5fb;
+    color: #47729d;
+    border-radius: 5px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.producto-contenido h3 {
+    margin: 0 0 10px;
+    color: #1e293b;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.producto-contenido p {
+    margin: 0;
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+.producto-final {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: auto;
+    padding-top: 22px;
+    border-top: 1px solid #edf1f5;
+}
+
+.producto-precio {
+    color: var(--azul-oscuro);
+    font-size: 1.45rem;
+    font-weight: 800;
+}
+
+.producto-precio small {
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.producto-presentacion {
+    padding: 6px 10px;
+    background-color: #f5f7fa;
+    color: #64748b;
+    border-radius: 6px;
+    font-size: 0.76rem;
+}
+
+/* PRODUCTOS ESPECIALES */
+.producto-especial {
+    border-color: #d9cde7;
+}
+
+.producto-especial:hover {
+    border-color: #bda6d3;
+}
+
+.producto-especial .producto-categoria {
+    background-color: #f3edf8;
+    color: #80619a;
+}
+
+/* =========================================================
+   NOTA FINAL DEL CATÁLOGO
+   ========================================================= */
+.catalogo-nota {
+    max-width: 1000px;
+    margin: 10px auto 70px;
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid var(--azul);
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(30, 64, 95, 0.06);
+}
+
+.nota-icono {
+    display: none;
+}
+
+.catalogo-nota h3 {
+    margin: 0 0 6px;
+    color: var(--azul-oscuro);
+    font-size: 1.15rem;
+}
+
+.catalogo-nota p {
+    margin: 0;
+    color: #64748b;
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   BOTÓN DEL CATÁLOGO
+   ========================================================= */
+.btn-catalogo {
+    background: var(--azul);
+    color: white;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-catalogo:hover {
+    background: var(--azul-oscuro);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(74, 144, 226, 0.30);
+}
+
+/* =========================================================
+   RESPONSIVE - CATÁLOGO
+   ========================================================= */
+@media (max-width: 900px) {
+    .catalogo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .catalogo-hero {
+        min-height: 330px;
+    }
+
+    .catalogo-hero-contenido {
+        padding: 35px 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .catalogo-hero {
+        min-height: 300px;
+        padding: 55px 15px;
+    }
+
+    .catalogo-hero-contenido {
+        padding: 30px 20px;
+        border-radius: 14px;
+    }
+
+    .catalogo-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .catalogo-hero p {
+        font-size: 0.95rem;
+    }
+
+    .catalogo-intro {
+        padding: 50px 20px 25px;
+    }
+
+    .catalogo-intro h2 {
+        font-size: 2rem;
+    }
+
+    .catalogo-categoria,
+    .categoria-frutales {
+        padding: 40px 20px 50px;
+    }
+
+    .categoria-titulo {
+        align-items: flex-start;
+        margin-bottom: 25px;
+    }
+
+    .categoria-titulo h2 {
+        font-size: 1.55rem;
+    }
+
+    .categoria-titulo p {
+        font-size: 0.9rem;
+    }
+
+    .catalogo-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .producto-card {
+        min-height: 270px;
+    }
+
+    .producto-contenido {
+        padding: 21px;
+    }
+
+    .producto-contenido h3 {
+        font-size: 1.25rem;
+    }
+
+    .catalogo-nota {
+        margin: 10px 20px 50px;
+        padding: 22px 20px;
+    }
+
     .sabor-imagen {
-        height: 180px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 400px) {
+    .producto-final {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .producto-precio {
+        font-size: 1.35rem;
+    }
+}
+/* =====================================
+   SECCIÓN NUESTRO COMPROMISO (FIX)
+   ===================================== */
+.nosotros-compromiso {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--blanco);
+}
+
+.nosotros-compromiso h2 {
+    font-size: 2.5rem;
+    color: var(--azul);
+    margin-bottom: 3rem;
+}
+
+.grid-compromiso {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.compromiso-item {
+    background: var(--blanco);
+    border-radius: 20px;
+    padding: 2.5rem 1.8rem;
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.12);
+    border: 2px solid var(--celeste-claro);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.compromiso-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(74, 144, 226, 0.25);
+    border-color: var(--celeste);
+}
+
+.compromiso-numero {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.2rem;
+    background: linear-gradient(135deg, var(--azul), var(--celeste));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 6px 18px rgba(74, 144, 226, 0.35);
+    letter-spacing: 1px;
+}
+
+.compromiso-item h3 {
+    color: var(--azul);
+    font-size: 1.35rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.compromiso-item p {
+    font-size: 0.98rem;
+    color: var(--texto-suave);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* RESPONSIVE COMPROMISO */
+@media (max-width: 768px) {
+    .nosotros-compromiso {
+        padding: 3rem 1.2rem;
+    }
+
+    .nosotros-compromiso h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .grid-compromiso {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .compromiso-item {
+        padding: 2rem 1.5rem;
+    }
+
+    .compromiso-numero {
+        width: 60px;
+        height: 60px;
+        font-size: 1.3rem;
+    }
+
+    .compromiso-item h3 {
+        font-size: 1.2rem;
     }
 }
