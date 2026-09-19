@@ -2,49 +2,109 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Sabores - Heladería Quinto Sabor 🍦</title>
 
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- CSS propio -->
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-    <!-- ENCABEZADO / NAVEGACIÓN -->
+
+    <!-- =========================================
+         ENCABEZADO / NAVEGACIÓN
+    ========================================== -->
+
     <header class="header">
 
         <div class="logo">
+
             <a href="index.html">
-                <img src="Img/logo.png" alt="Quinto Sabor" class="logo-img">
-                <span class="logo-texto">Quinto Sabor</span>
+
+                <img
+                    src="Img/logo.png"
+                    alt="Quinto Sabor"
+                    class="logo-img"
+                >
+
+                <span class="logo-texto">
+                    Quinto Sabor
+                </span>
+
             </a>
+
         </div>
 
-       <nav class="nav" id="nav">
-            <a href="index.html">Inicio</a>
-            <a href="sabores.html">Sabores</a>
-            <a href="mision y vision.html">Misión y Visión</a>
-            <a href="promociones.html">Promociones</a>
-            <a href="contactanos.html">Contacto</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="catalogo.html">Nuestro Catálogo</a>
+
+        <nav class="nav" id="nav">
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <a href="sabores.html">
+                Sabores
+            </a>
+
+            <a href="mision y vision.html">
+                Misión y Visión
+            </a>
+
+            <a href="promociones.html">
+                Promociones
+            </a>
+
+            <a href="contactanos.html">
+                Contacto
+            </a>
+
+            <a href="nosotros.html">
+                Nosotros
+            </a>
+
+            <a href="catalogo.html">
+                Nuestro Catálogo
+            </a>
+
         </nav>
 
-        <button class="menu-btn" id="menuBtn">☰</button>
+
+        <button
+            class="menu-btn"
+            id="menuBtn"
+            type="button"
+        >
+            ☰
+        </button>
 
     </header>
 
 
-    <!-- ENCABEZADO DEL CATÁLOGO -->
+
+    <!-- =========================================
+         ENCABEZADO DEL CATÁLOGO
+    ========================================== -->
+
     <section class="catalogo-hero">
 
         <div class="catalogo-hero-contenido">
 
-            <span class="catalogo-etiqueta">🍦 QUINTO SABOR</span>
-
-            <h1>Catálogo de Sabores</h1>
+            <h1>
+                Catálogo de Sabores
+            </h1>
 
             <p>
                 Descubre nuestros helados artesanales,
@@ -57,10 +117,16 @@
     </section>
 
 
-    <!-- INTRODUCCIÓN -->
+
+    <!-- =========================================
+         INTRODUCCIÓN
+    ========================================== -->
+
     <section class="catalogo-intro">
 
-        <h2>Elige tu sabor favorito</h2>
+        <h2>
+            Elige tu sabor favorito
+        </h2>
 
         <p>
             Tenemos opciones para todos los gustos.
@@ -71,21 +137,693 @@
     </section>
 
 
-    <!-- CATEGORÍA CLÁSICOS -->
-    <section class="catalogo-categoria" id="clasicos">
+
+    <!-- =========================================
+         GALERÍA DESTACADA
+    ========================================== -->
+
+    <section class="catalogo-galeria py-5">
+
+        <div class="container">
+
+
+            <!-- ENCABEZADO -->
+
+            <div class="text-center mb-5">
+
+                <span class="badge rounded-pill text-bg-light px-3 py-2 mb-3">
+                    🍦 Nuestros favoritos
+                </span>
+
+                <h2 class="fw-bold display-6">
+                    Conoce nuestros sabores
+                </h2>
+
+                <p class="text-muted mx-auto catalogo-descripcion">
+                    Descubre algunas de nuestras opciones y encuentra
+                    el sabor perfecto para ti.
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================
+                 TARJETAS
+            ================================== -->
+
+            <div class="row g-4">
+
+
+                <!-- 1. VAINILLA -->
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+
+                    <div class="card sabor-card h-100 border-0 shadow-sm">
+
+                        <div class="sabor-imagen">
+
+                            <img
+                                src="Img/catalogo/vainilla.jpg"
+                                class="card-img-top"
+                                alt="Vainilla Francesa"
+                            >
+
+                            <span class="badge sabor-badge">
+                                Clásico
+                            </span>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <h5 class="card-title fw-bold">
+                                Vainilla Francesa
+                            </h5>
+
+                            <p class="card-text text-muted">
+                                Suave, cremosa y con un aroma
+                                inconfundible.
+                            </p>
+
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <span class="precio-sabor">
+                                    $35
+                                    <small>MXN</small>
+                                </span>
+
+                                <span class="presentacion-sabor">
+                                    🍨
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 2. CHOCOLATE -->
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+
+                    <div class="card sabor-card h-100 border-0 shadow-sm">
+
+                        <div class="sabor-imagen">
+
+                            <img
+                                src="Img/catalogo/chocolate.jpg"
+                                class="card-img-top"
+                                alt="Chocolate Belga"
+                            >
+
+                            <span class="badge sabor-badge">
+                                Clásico
+                            </span>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <h5 class="card-title fw-bold">
+                                Chocolate Belga
+                            </h5>
+
+                            <p class="card-text text-muted">
+                                Chocolate intenso con un
+                                delicioso sabor a cacao.
+                            </p>
+
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <span class="precio-sabor">
+                                    $42
+                                    <small>MXN</small>
+                                </span>
+
+                                <span class="presentacion-sabor">
+                                    🍫
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 3. FRESA -->
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+
+                    <div class="card sabor-card h-100 border-0 shadow-sm">
+
+                        <div class="sabor-imagen">
+
+                            <img
+                                src="Img/catalogo/fresa.jpg"
+                                class="card-img-top"
+                                alt="Fresa Natural"
+                            >
+
+                            <span class="badge sabor-badge">
+                                Clásico
+                            </span>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <h5 class="card-title fw-bold">
+                                Fresa Natural
+                            </h5>
+
+                            <p class="card-text text-muted">
+                                Fresas frescas con un toque
+                                suave y cremoso.
+                            </p>
+
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <span class="precio-sabor">
+                                    $35
+                                    <small>MXN</small>
+                                </span>
+
+                                <span class="presentacion-sabor">
+                                    🍓
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 4. MANGO -->
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+
+                    <div class="card sabor-card h-100 border-0 shadow-sm">
+
+                        <div class="sabor-imagen">
+
+                            <img
+                                src="Img/catalogo/mango.jpg"
+                                class="card-img-top"
+                                alt="Mango Tropical"
+                            >
+
+                            <span class="badge sabor-badge">
+                                Frutal
+                            </span>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <h5 class="card-title fw-bold">
+                                Mango Tropical
+                            </h5>
+
+                            <p class="card-text text-muted">
+                                Mango maduro con un toque
+                                cítrico refrescante.
+                            </p>
+
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <span class="precio-sabor">
+                                    $38
+                                    <small>MXN</small>
+                                </span>
+
+                                <span class="presentacion-sabor">
+                                    🥭
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 5. LIMÓN -->
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+
+                    <div class="card sabor-card h-100 border-0 shadow-sm">
+
+                        <div class="sabor-imagen">
+
+                            <img
+                                src="Img/catalogo/limon.jpg"
+                                class="card-img-top"
+                                alt="Limón Frozen"
+                            >
+
+                            <span class="badge sabor-badge">
+                                Frutal
+                            </span>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <h5 class="card-title fw-bold">
+                                Limón Frozen
+                            </h5>
+
+                            <p class="card-text text-muted">
+                                Natural, fresco y perfecto
+                                para los días calurosos.
+                            </p>
+
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <span class="precio-sabor">
+                                    $32
+                                    <small>MXN</small>
+                                </span>
+
+                                <span class="presentacion-sabor">
+                                    🍋
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 6. PIÑA -->
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+
+                    <div class="card sabor-card h-100 border-0 shadow-sm">
+
+                        <div class="sabor-imagen">
+
+                            <img
+                                src="Img/catalogo/pina.jpg"
+                                class="card-img-top"
+                                alt="Piña Colada"
+                            >
+
+                            <span class="badge sabor-badge">
+                                Frutal
+                            </span>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <h5 class="card-title fw-bold">
+                                Piña Colada
+                            </h5>
+
+                            <p class="card-text text-muted">
+                                Piña y coco en una combinación
+                                completamente tropical.
+                            </p>
+
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <span class="precio-sabor">
+                                    $40
+                                    <small>MXN</small>
+                                </span>
+
+                                <span class="presentacion-sabor">
+                                    🍍
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 7. SANDÍA -->
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+
+                    <div class="card sabor-card h-100 border-0 shadow-sm">
+
+                        <div class="sabor-imagen">
+
+                            <img
+                                src="Img/catalogo/sandia.jpg"
+                                class="card-img-top"
+                                alt="Sandía Fresca"
+                            >
+
+                            <span class="badge sabor-badge">
+                                Frutal
+                            </span>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <h5 class="card-title fw-bold">
+                                Sandía Fresca
+                            </h5>
+
+                            <p class="card-text text-muted">
+                                Ligera, refrescante y con un
+                                toque de menta.
+                            </p>
+
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <span class="precio-sabor">
+                                    $35
+                                    <small>MXN</small>
+                                </span>
+
+                                <span class="presentacion-sabor">
+                                    🍉
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 8. COOKIES -->
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+
+                    <div class="card sabor-card h-100 border-0 shadow-sm">
+
+                        <div class="sabor-imagen">
+
+                            <img
+                                src="Img/catalogo/cookies.jpg"
+                                class="card-img-top"
+                                alt="Cookies and Cream"
+                            >
+
+                            <span class="badge sabor-badge">
+                                Especial
+                            </span>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <h5 class="card-title fw-bold">
+                                Cookies &amp; Cream
+                            </h5>
+
+                            <p class="card-text text-muted">
+                                Cremosa vainilla acompañada
+                                de galletas trituradas.
+                            </p>
+
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <span class="precio-sabor">
+                                    $45
+                                    <small>MXN</small>
+                                </span>
+
+                                <span class="presentacion-sabor">
+                                    🍪
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 9. NUEZ -->
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+
+                    <div class="card sabor-card h-100 border-0 shadow-sm">
+
+                        <div class="sabor-imagen">
+
+                            <img
+                                src="Img/catalogo/nuez.jpg"
+                                class="card-img-top"
+                                alt="Nuez Caramelo"
+                            >
+
+                            <span class="badge sabor-badge">
+                                Especial
+                            </span>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <h5 class="card-title fw-bold">
+                                Nuez Caramelo
+                            </h5>
+
+                            <p class="card-text text-muted">
+                                Nueces tostadas con un
+                                delicioso caramelo artesanal.
+                            </p>
+
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <span class="precio-sabor">
+                                    $48
+                                    <small>MXN</small>
+                                </span>
+
+                                <span class="presentacion-sabor">
+                                    🥜
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 10. DONA -->
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+
+                    <div class="card sabor-card h-100 border-0 shadow-sm">
+
+                        <div class="sabor-imagen">
+
+                            <img
+                                src="Img/catalogo/dona.jpg"
+                                class="card-img-top"
+                                alt="Dona Glaseada"
+                            >
+
+                            <span class="badge sabor-badge">
+                                Especial
+                            </span>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <h5 class="card-title fw-bold">
+                                Dona Glaseada
+                            </h5>
+
+                            <p class="card-text text-muted">
+                                Helado con trozos de dona
+                                y glaseado de chocolate.
+                            </p>
+
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <span class="precio-sabor">
+                                    $50
+                                    <small>MXN</small>
+                                </span>
+
+                                <span class="presentacion-sabor">
+                                    🍩
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 11. COCO -->
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+
+                    <div class="card sabor-card h-100 border-0 shadow-sm">
+
+                        <div class="sabor-imagen">
+
+                            <img
+                                src="Img/catalogo/coco.jpg"
+                                class="card-img-top"
+                                alt="Coco Vegano"
+                            >
+
+                            <span class="badge sabor-badge">
+                                Sin lactosa
+                            </span>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <h5 class="card-title fw-bold">
+                                Coco Vegano
+                            </h5>
+
+                            <p class="card-text text-muted">
+                                Cremoso helado de coco
+                                elaborado con base vegetal.
+                            </p>
+
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <span class="precio-sabor">
+                                    $45
+                                    <small>MXN</small>
+                                </span>
+
+                                <span class="presentacion-sabor">
+                                    🥥
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- BOTÓN -->
+
+            <div class="text-center mt-5">
+
+                <a
+                    href="#clasicos"
+                    class="btn btn-catalogo rounded-pill px-4 py-3"
+                >
+                    🍨 Ver nuestro catálogo completo
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CATEGORÍA CLÁSICOS
+    ========================================== -->
+
+    <section
+        class="catalogo-categoria"
+        id="clasicos"
+    >
 
         <div class="categoria-titulo">
+
             <span>🍨</span>
+
             <div>
-                <h2>Sabores Clásicos</h2>
-                <p>Los favoritos que nunca pasan de moda.</p>
+
+                <h2>
+                    Sabores Clásicos
+                </h2>
+
+                <p>
+                    Los favoritos que nunca pasan de moda.
+                </p>
+
             </div>
+
         </div>
 
 
         <div class="catalogo-grid">
 
+
             <!-- VAINILLA -->
+
             <article class="producto-card">
 
                 <div class="producto-icono">
@@ -98,7 +836,9 @@
                         Clásico
                     </span>
 
-                    <h3>Vainilla Francesa</h3>
+                    <h3>
+                        Vainilla Francesa
+                    </h3>
 
                     <p>
                         Suave vainilla con un aroma
@@ -123,7 +863,9 @@
             </article>
 
 
+
             <!-- CHOCOLATE -->
+
             <article class="producto-card">
 
                 <div class="producto-icono">
@@ -136,7 +878,9 @@
                         Clásico
                     </span>
 
-                    <h3>Chocolate Belga</h3>
+                    <h3>
+                        Chocolate Belga
+                    </h3>
 
                     <p>
                         Chocolate intenso con trozos
@@ -161,7 +905,9 @@
             </article>
 
 
+
             <!-- FRESA -->
+
             <article class="producto-card">
 
                 <div class="producto-icono">
@@ -174,7 +920,9 @@
                         Clásico
                     </span>
 
-                    <h3>Fresa Natural</h3>
+                    <h3>
+                        Fresa Natural
+                    </h3>
 
                     <p>
                         Fresas frescas de temporada
@@ -198,26 +946,46 @@
 
             </article>
 
+
         </div>
 
     </section>
 
 
-    <!-- CATEGORÍA FRUTALES -->
-    <section class="catalogo-categoria categoria-frutales" id="frutales">
+
+    <!-- =========================================
+         CATEGORÍA FRUTALES
+    ========================================== -->
+
+    <section
+        class="catalogo-categoria categoria-frutales"
+        id="frutales"
+    >
 
         <div class="categoria-titulo">
+
             <span>🍓</span>
+
             <div>
-                <h2>Sabores Frutales</h2>
-                <p>Frescura natural en cada cucharada.</p>
+
+                <h2>
+                    Sabores Frutales
+                </h2>
+
+                <p>
+                    Frescura natural en cada cucharada.
+                </p>
+
             </div>
+
         </div>
 
 
         <div class="catalogo-grid">
 
+
             <!-- MANGO -->
+
             <article class="producto-card">
 
                 <div class="producto-icono">
@@ -230,7 +998,9 @@
                         Frutal
                     </span>
 
-                    <h3>Mango Tropical</h3>
+                    <h3>
+                        Mango Tropical
+                    </h3>
 
                     <p>
                         Mango maduro con un toque
@@ -255,7 +1025,9 @@
             </article>
 
 
+
             <!-- LIMÓN -->
+
             <article class="producto-card">
 
                 <div class="producto-icono">
@@ -268,7 +1040,9 @@
                         Frutal
                     </span>
 
-                    <h3>Limón Frozen</h3>
+                    <h3>
+                        Limón Frozen
+                    </h3>
 
                     <p>
                         Refrescante limón natural,
@@ -293,7 +1067,9 @@
             </article>
 
 
+
             <!-- PIÑA COLADA -->
+
             <article class="producto-card">
 
                 <div class="producto-icono">
@@ -306,7 +1082,9 @@
                         Frutal
                     </span>
 
-                    <h3>Piña Colada</h3>
+                    <h3>
+                        Piña Colada
+                    </h3>
 
                     <p>
                         Piña con coco cremoso y un
@@ -331,7 +1109,9 @@
             </article>
 
 
+
             <!-- SANDÍA -->
+
             <article class="producto-card">
 
                 <div class="producto-icono">
@@ -344,7 +1124,9 @@
                         Frutal
                     </span>
 
-                    <h3>Sandía Fresca</h3>
+                    <h3>
+                        Sandía Fresca
+                    </h3>
 
                     <p>
                         Sandía jugosa con menta para
@@ -368,26 +1150,46 @@
 
             </article>
 
+
         </div>
 
     </section>
 
 
-    <!-- CATEGORÍA ESPECIALES -->
-    <section class="catalogo-categoria" id="especiales">
+
+    <!-- =========================================
+         CATEGORÍA ESPECIALES
+    ========================================== -->
+
+    <section
+        class="catalogo-categoria"
+        id="especiales"
+    >
 
         <div class="categoria-titulo">
+
             <span>✨</span>
+
             <div>
-                <h2>Sabores Especiales</h2>
-                <p>Combinaciones diferentes para algo especial.</p>
+
+                <h2>
+                    Sabores Especiales
+                </h2>
+
+                <p>
+                    Combinaciones diferentes para algo especial.
+                </p>
+
             </div>
+
         </div>
 
 
         <div class="catalogo-grid">
 
+
             <!-- COOKIES -->
+
             <article class="producto-card producto-especial">
 
                 <div class="producto-icono">
@@ -400,7 +1202,9 @@
                         Especial
                     </span>
 
-                    <h3>Cookies & Cream</h3>
+                    <h3>
+                        Cookies &amp; Cream
+                    </h3>
 
                     <p>
                         Galletas trituradas combinadas
@@ -425,7 +1229,9 @@
             </article>
 
 
+
             <!-- NUEZ -->
+
             <article class="producto-card producto-especial">
 
                 <div class="producto-icono">
@@ -438,7 +1244,9 @@
                         Especial
                     </span>
 
-                    <h3>Nuez Caramelo</h3>
+                    <h3>
+                        Nuez Caramelo
+                    </h3>
 
                     <p>
                         Nueces tostadas acompañadas
@@ -463,7 +1271,9 @@
             </article>
 
 
+
             <!-- DONA -->
+
             <article class="producto-card producto-especial">
 
                 <div class="producto-icono">
@@ -476,7 +1286,9 @@
                         Especial
                     </span>
 
-                    <h3>Dona Glaseada</h3>
+                    <h3>
+                        Dona Glaseada
+                    </h3>
 
                     <p>
                         Helado con trozos de dona
@@ -501,7 +1313,9 @@
             </article>
 
 
+
             <!-- PASTEL -->
+
             <article class="producto-card producto-especial">
 
                 <div class="producto-icono">
@@ -514,7 +1328,9 @@
                         Especial
                     </span>
 
-                    <h3>Pastel de Fresa</h3>
+                    <h3>
+                        Pastel de Fresa
+                    </h3>
 
                     <p>
                         Sabor a pastel de fresa con
@@ -538,26 +1354,45 @@
 
             </article>
 
+
         </div>
 
     </section>
 
 
-    <!-- CATEGORÍA SIN LACTOSA -->
-    <section class="catalogo-categoria categoria-sin-lactosa">
+
+    <!-- =========================================
+         CATEGORÍA SIN LACTOSA
+    ========================================== -->
+
+    <section
+        class="catalogo-categoria categoria-sin-lactosa"
+    >
 
         <div class="categoria-titulo">
+
             <span>🌱</span>
+
             <div>
-                <h2>Opciones Sin Lactosa</h2>
-                <p>Alternativas deliciosas para disfrutar.</p>
+
+                <h2>
+                    Opciones Sin Lactosa
+                </h2>
+
+                <p>
+                    Alternativas deliciosas para disfrutar.
+                </p>
+
             </div>
+
         </div>
 
 
         <div class="catalogo-grid">
 
+
             <!-- COCO -->
+
             <article class="producto-card">
 
                 <div class="producto-icono">
@@ -570,7 +1405,9 @@
                         Sin lactosa
                     </span>
 
-                    <h3>Coco Vegano</h3>
+                    <h3>
+                        Coco Vegano
+                    </h3>
 
                     <p>
                         Helado de coco cremoso
@@ -595,7 +1432,9 @@
             </article>
 
 
+
             <!-- CHOCOLATE VEGANO -->
+
             <article class="producto-card">
 
                 <div class="producto-icono">
@@ -608,7 +1447,9 @@
                         Sin lactosa
                     </span>
 
-                    <h3>Chocolate Vegano</h3>
+                    <h3>
+                        Chocolate Vegano
+                    </h3>
 
                     <p>
                         Chocolate intenso preparado
@@ -633,7 +1474,9 @@
             </article>
 
 
+
             <!-- FRUTOS ROJOS -->
+
             <article class="producto-card">
 
                 <div class="producto-icono">
@@ -646,7 +1489,9 @@
                         Sin lactosa
                     </span>
 
-                    <h3>Frutos Rojos</h3>
+                    <h3>
+                        Frutos Rojos
+                    </h3>
 
                     <p>
                         Mezcla de fresas, moras y
@@ -670,12 +1515,17 @@
 
             </article>
 
+
         </div>
 
     </section>
 
 
-    <!-- NOTA DE PRECIOS -->
+
+    <!-- =========================================
+         NOTA DE PRECIOS
+    ========================================== -->
+
     <section class="catalogo-nota">
 
         <div class="nota-icono">
@@ -683,19 +1533,27 @@
         </div>
 
         <div>
-            <h3>Una cucharada de felicidad</h3>
+
+            <h3>
+                Una cucharada de felicidad
+            </h3>
 
             <p>
                 Los precios mostrados corresponden a una porción
                 individual de helado. Pregunta por nuestras
                 promociones y presentaciones especiales.
             </p>
+
         </div>
 
     </section>
 
 
-    <!-- PIE DE PÁGINA -->
+
+    <!-- =========================================
+         PIE DE PÁGINA
+    ========================================== -->
+
     <footer class="footer">
 
         <p>
@@ -703,17 +1561,40 @@
             Todos los derechos reservados.
         </p>
 
+
         <div class="redes">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">TikTok</a>
+
+            <a href="#">
+                Facebook
+            </a>
+
+            <a href="#">
+                Instagram
+            </a>
+
+            <a href="#">
+                TikTok
+            </a>
+
         </div>
 
     </footer>
 
 
-    <!-- JAVASCRIPT -->
+
+    <!-- =========================================
+         JAVASCRIPT DE BOOTSTRAP
+    ========================================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- JAVASCRIPT PROPIO -->
+
     <script src="script.js"></script>
+
 
 </body>
 
