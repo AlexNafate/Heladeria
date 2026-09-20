@@ -1925,3 +1925,39 @@ body {
     .bienvenida-eslogan { font-size: 0.9rem; }
     .bienvenida-linea { width: 70px; }
 }
+/* LOGO DENTRO DEL HERO */
+.hero-logo {
+    display: block;
+    height: 120px;
+    width: auto;
+    margin: 0 auto 1.2rem;
+    filter: drop-shadow(0 6px 15px rgba(0, 0, 0, 0.35));
+    animation: heroLogoEntrada 1.2s ease-out;
+}
+
+@keyframes heroLogoEntrada {
+    0% {
+        opacity: 0;
+        transform: scale(0.6) translateY(-20px);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.08) translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-logo {
+        height: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-logo {
+        height: 75px;
+    }
+}
