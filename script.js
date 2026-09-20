@@ -40,3 +40,27 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+// =====================================
+// PANTALLA DE BIENVENIDA
+// =====================================
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const bienvenida = document.getElementById('bienvenidaOverlay');
+
+    if (!bienvenida) return;
+
+    // Bloquear el scroll mientras se muestra
+    document.body.style.overflow = 'hidden';
+
+    // Después de 3.5 segundos, ocultar la pantalla
+    setTimeout(function () {
+
+        bienvenida.classList.add('oculto');
+
+        // Reactivar el scroll
+        document.body.style.overflow = '';
+
+    }, 3500);
+
+});
